@@ -40,7 +40,7 @@ class Battlefield{
     var rndm = Random().nextInt(sp2)+sp1;
     //Randomly a space ship is selected to hit first
     //SpaceShips hit each other
-    //Until one of them is destroyed
+    //Until one of them is destroyed--
     hit(){
       
     }
