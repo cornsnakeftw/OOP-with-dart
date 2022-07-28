@@ -4,10 +4,24 @@ void main() async {
   
 }
 abstract class SpaceShip{
+
+  SpaceShip({this.health, this.firepower});
+
   int health;
   int firePower;
 
-  void hit();
+  void hit(SpaceShip spaceShip){
+      spaceShip.minushealth(firepower);
+  }
+
+  void minushealth(int firepower){
+    bool isDestroyed(){
+    health <= 0;
+
+    if (isDestroyed){
+      print('defeated');
+    }
+     }
   void isDestroyed();
   //Methods
   //hit
@@ -38,6 +52,11 @@ class Battlefield{
 
 class ArmoredSpaceShip extends SpaceShip{
   //Randomly absorbs hit
+  ArmoredSpaceShip({
+    int health,
+    int firepower,
+    
+  })
   double maxArmorPower;
   @override
   void hit(){
